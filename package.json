@@ -1,0 +1,11 @@
+{
+	"name": "js",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"dev": "nodemon index.js"
+	},
+	"repository": "git@stranger:dmm-stranger/javaScript.git",
+	"author": "14HAK <dulonmolla88@gmail.com>",
+	"license": "MIT"
+}

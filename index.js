@@ -59,3 +59,48 @@ function flatArr(element) {
 	}
 }
 // console.log(flat);
+
+// count occurences:
+const arryy = ['apple', 'banana', 'apple', 'orange'];
+const countOccurrences = arryy.reduce((accumulator, currentValue) => {
+	accumulator[currentValue] = (accumulator[currentValue] || 0) + 1;
+	return accumulator;
+}, {});
+// console.log(countOccurrences);
+
+// groupd by user:
+const users = [
+	{ name: 'A', role: 'admin' },
+	{ name: 'B', role: 'user' },
+	{ name: 'C', role: 'admin' },
+];
+const groups = users.reduce((acc, user) => {
+	const { role } = user;
+	if (!acc[role]) {
+		acc[role] = [];
+	}
+	acc[role].push(user);
+	return acc;
+}, {});
+// console.log(groups);
+
+// remove duplicates:
+const arree = [1, 2, 2, 3, 4, 4];
+const removeDup = arree.reduce((acc, element) => {
+	if (!acc.includes(element)) {
+		acc.push(element);
+	}
+	return acc;
+}, []);
+// console.log(removeDup);
+
+// 10. Transform array to object:
+const data = [
+	{ id: 1, name: 'A' },
+	{ id: 2, name: 'B' },
+];
+const exchangeObj = data.reduce((acc, elem) => {
+	acc[elem.id] = elem.name;
+	return acc;
+}, {});
+console.log(exchangeObj);

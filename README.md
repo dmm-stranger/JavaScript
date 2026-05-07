@@ -7,6 +7,7 @@ only javaScript only...
 forEach()
 map()
 filter()
+reduce()
 
 // Object...
 ```

@@ -8,6 +8,7 @@ forEach()
 map()
 filter()
 reduce()
+find()
 
 // Object...
 ```

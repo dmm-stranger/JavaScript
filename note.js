@@ -75,19 +75,21 @@
 // Number.isInteger(), Check if number is integer_quantity check_pagination => Number.isInteger(10.5); //output: false
 
 // MATH METHODS:
-// Math.random(), random =>
-// Math.floor(), round down =>
-// Math.ceil(), round up =>
-// Math.round(), nearest =>
-// Math.max(), max value =>
-// Math.min(), min value =>
-// Math.abs(), absolute =>
+// Math.random(), Generate random decimal number_OTP_random colors => Math.floor(Math.random() * 10) + 1; // 1 to 10
+// Math.random(), Generate random decimal number_OTP_random colors => Math.floor(1000 + Math.random() * 9000); // otp create
+// Math.floor(), Round DOWN to nearest integer => Math.floor(4.9); //output: 4
+// Math.ceil(), Round UP to nearest integer => Math.ceil(4.1); //output: 5
+// Math.round(), Round to nearest integer => Math.round(4.4); //output: 4
+// Math.max(), Get largest number => Math.max(5, 10, 2);
+// Math.min(), Get smallest number => Math.min(...arrNumbers);
+// Math.abs(), Get absolute positive value => Math.abs(-10); //output: 10
 
 // DATE METHODS:
-// Date.now(), timestamp =>
-// new Date(), current date =>
-// toISOString(), API date format =>
-// toLocaleDateString(), display date =>
+// Date.now(), Get current timestamp in miliseconds_unique IDs_timers_JWT expiration_analytics => const id = Date.now();
+// new Date(), Create Date object_current time_date calculations_formatting_scheduling => const now = new Date();
+// new Date(), Create Date object => const date = new Date("2026-01-01");
+// toISOString(), API date format_Convert date to ISO string format_mongoDB_API => const now = new Date().toISOString();
+// toLocaleDateString(), Display readable local date format_UI display => const now = new Date().toLocaleDateString("en-US");
 
 // PROMISE & ASYNC METHODS:
 // fetch(), API request =>

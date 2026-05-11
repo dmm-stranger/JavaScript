@@ -61,16 +61,18 @@
 // Dynamic keys [], dynamic objects => const field = "email"; + const user = {[field]: "test@gmail.com"};
 
 // JSON METHODS:
-// JSON.stringify(), object to JSON =>
-// JSON.parse(), JSON to object =>
+// JSON.stringify(), object to JSON => const jsonData = JSON.stringify({name: "John", age: 25});
+// JSON.stringify(), JSON.stringify(value, replacer, space) =>  JSON.stringify(data, null, 2); // Pretty Formatting JSON
+// JSON.parse(), JSON to object => const user = JSON.parse('{"name":"John","age":25}');
 
 // NUMBER METHODS:
-// Number(), convert number =>
-// parseInt(), integer parse =>
-// parseFloat(), float parse =>
-// toFixed(), decimal format ting =>
-// isNaN(), check invalid number =>
-// Number.isInteger(), integer check =>
+// Number(), convert value to number_form input conversion_API data conversion_calculations => const num = Number("100");
+// Number(), convert value to number => const num = Number(true); //output: 1 // Number("hello"); //output: NaN
+// parseInt(), Convert string to integer_removing decimals => parseInt("100"); // parseInt("99.99px");
+// parseFloat(), Convert string to decimal number => parseFloat("99.99"); // parseFloat("12.5kg");
+// toFixed(), Format decimal places_currency_finance_prices_percentages => 99.3654.toFixed(2);
+// isNaN(), Check if value is NOT a valid number_form validation_validation => isNaN("hello"); //output: true
+// Number.isInteger(), Check if number is integer_quantity check_pagination => Number.isInteger(10.5); //output: false
 
 // MATH METHODS:
 // Math.random(), random =>

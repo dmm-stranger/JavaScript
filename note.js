@@ -39,23 +39,26 @@
 // at(), Access character using negative index => str.at(-1);
 
 // OBJECT METHODS:
-// Object.keys(), object keys =>
-// Object.values(), values =>
-// Object.entries(), key-value pairs =>
-// Object.fromEntries(), array → object =>
-// Object.assign(), merge objects =>
-// Object.freeze(), immutable object =>
-// Object.seal(), prevent add/remove =>
-// Object.hasOwn(), ⭐	property check =>
-// structuredClone(), ⭐	deep clone =>
+// Object.keys(), object keys array_looping_dynamic forms_validation systems => Object.keys({name: "a", age: 30});
+// Object.values(), object values array_analytics_chart systems_extracting data => Object.values({name: "a", age: 30});
+// Object.entries(), object key-value pairs_looping_converting_rendering UI =>  Object.entries({name: "a", age: 30});
+// Object.fromEntries(), array to object_transforming API_rebuilding_filtering object => Object.fromEntries(["name", "John"])
+// Object.assign(), merge/copy objects_cloning_updating state_merging settings => const result = Object.assign({},obj1);
+// update objects, => setUser({...user, name: "Updated"});
+// Object.freeze(), immutable object_constants_app config_security sensitive data => Object.freeze({api: "/v1"});
+// Object.seal(), Prevent adding/removing properti_controlled object structure_forms/settings => Object.seal({name: "John"});
+// Object.hasOwn(), ⭐	Check if object has property_validation_checking safe properties => Object.hasOwn(user, "name");
+// structuredClone(), ⭐	deep clone_React state_objects_avoiding mutation => const copy = structuredClone({name: "John"});
 
 // MODERN OBJECT FEATURES:
-// Destructuring, xtract properties  =>
-// Spread ..., clone/merge =>
-// Rest ..., collect remaining =>
-// Optional chaining ?., safe access =>
-// Nullish coalescing ??, default fallback =>
-// Dynamic keys [], dynamic objects =>
+// Object Destructuring, cleaner code => const { name: firstName, age } = {name: "John", age: 25};
+// Array Destructuring, cleaner code => const [first, "", third] = ["red", "blue", "green"];
+// Spread ..., Clone_merge_expand arrays/objects => const copyArr = [...arr1, ...arr2]; / const copyObj = [...obj1, ...obj2];
+// Rest ..., collect remaining => const [first, ...rest] = arr; / const { password, ...safeUser } = user;
+// Optional chaining ?., safe access => const city = obj?.address?.city;
+// Nullish coalescing ??, default fallback_null/undefined_left true is true => const name = null ?? "allow" //output: allow
+// Nullish coalescing ||, falsy values_left true is true => const money = 0 || 100 //output: 100
+// Dynamic keys [], dynamic objects => const field = "email"; + const user = {[field]: "test@gmail.com"};
 
 // JSON METHODS:
 // JSON.stringify(), object to JSON =>

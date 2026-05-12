@@ -91,32 +91,65 @@
 // toISOString(), API date format_Convert date to ISO string format_mongoDB_API => const now = new Date().toISOString();
 // toLocaleDateString(), Display readable local date format_UI display => const now = new Date().toLocaleDateString("en-US");
 
-// PROMISE & ASYNC METHODS:
-// fetch(), API request =>
-// async/await, async handling =>
-// Promise.all(), parallel tasks =>
-// Promise.allSettled(), all results =>
-// try/catch, error handling =>
+// PROMISE & ASYNC METHODS:(pending -> fulfilled -> rejected):
+// fetch(), make API request_frontend API calls_backend communication_external services =>
+// fetch('https://jsonplaceholder.typicode.com/users')
+// 	.then((res) => res.json())
+// 	.then((data) => {
+// 		console.log(data);
+// 	});
+// async/await, async handling_cleaner API calls_readable backend code_database queries =>
+// async function getUsers() {
+// 	const res = await fetch('https://jsonplaceholder.typicode.com/users');
+// 	const data = await res.json();
+// 	console.log(data);
+// }
+// getUsers();
+// Promise.all(), multiple async tasks IN PARALLEL_multiple API calls_dashboard data_loading many resources_Runs together ✅ faster =>
+// const p1 = fetch('/api/users');
+// const p2 = fetch('/api/products');
+// Promise.all([p1, p2]).then((responses) => {
+// 	console.log(responses);
+// });
+
+// const [users, products] = await Promise.all([
+// 	fetch('/api/users'),
+// 	fetch('/api/products'),
+// ]);
+
+// Promise.allSettled(), Wait for ALL promises_dashboards_analytics_independent API calls =>
+// const promises = [Promise.resolve('Success'), Promise.reject('Failed')];
+// Promise.allSettled(promises).then((results) => {
+// 	console.log(results);
+// });
+
+// try/catch, Handle errors safely_API calls_database queries_authentication_preventing crashes =>
+// try {
+// 	const res = await fetch('/api/users');
+// 	const data = await res.json();
+// 	console.log(data);
+// } catch (error) {
+// 	console.log(error);
+// }
+
+// try {
+// 	const res = await fetch('/api/users');
+// 	const data = await res.json();
+// 	console.log(data);
+// } catch (error) {
+// 	console.log(error);
+// }
 
 // SET & MAP:
-// new Set([1, 1, 2]), Unique values only  =>
-// new Map(), Better key-value storage =>
+// new Set([1, 1, 2]), Unique values only  => const unique = new Set([1,1,2]);
+// new Map(), Better key-value storage => const map = new Map();
 
 // MODULE SYSTEM:
-// import	import, module =>
-// export	export, module =>
-// export default, export	default =>
+// import	import, module => import {add, sub} from "./math.js"; // import {add as sum} from "./math.js";
+// export	export, module => export const add = (a, b) => {return a + b;};
+// export default, export	default => export default function getUser() {return "John";}
 
-// MODERN ES2022–ES2026:
-// at(), negative indexing  =>
-// toSorted(), immutable sort =>
-// toReversed(), immutable reverse =>
-// toSpliced(), immutable splice =>
-// structuredClone(), deep clone =>
-// Top-level await, cleaner async =>
-// Private class fields #, secure properties =>
-
-// REGEX METHODS:
-// test(), true/false regex =>
-// match(), matching =>
-// replace(), regex replace =>
+// REGEX METHODS: form validation_authentication_search systems_email validation:
+// test(), true/false regex => "/hello/i".test("Hello World"); //output: true
+// match(), matching => "My number is 123".match(/\d+/); //output: ["123"] || if not + //output: ["1", "2", "3"]
+// replace(), regex replace => "Hello World".replace(/World/, "JavaScript"); //output: Hello javaScript

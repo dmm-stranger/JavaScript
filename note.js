@@ -153,3 +153,37 @@
 // test(), true/false regex => "/hello/i".test("Hello World"); //output: true
 // match(), matching => "My number is 123".match(/\d+/); //output: ["123"] || if not + //output: ["1", "2", "3"]
 // replace(), regex replace => "Hello World".replace(/World/, "JavaScript"); //output: Hello javaScript
+
+// WEB API's (Timers Guide):
+// setTimeout(), run once after delay => setTimeout(callback, delay);
+// clearTimeout(), stop timeout_Cancel timeout BEFORE it runs => const timer = setTimeout(() => {console.log("Hello");}, 5000);clearTimeout(timer);
+// setInterval(), repeat continuously_REPEATEDLY after interval_OTP Countdown_Auto Logout => setInterval(callback, delay);
+// clearInterval(), stop repeating_Stop repeating interval => const interval = setInterval(() => {console.log("Hello");}, 1000);clearInterval(interval);
+
+// BROWSER DIALOG & URI:
+// alert(), Show popup message => alert("Hello World!);
+// confirm(), yes/no dialog => const result = confirm("Are you sure?");console.log(result);
+// prompt(), input dialog => const name = prompt("Enter your name");console.log(name);
+// encodeURIComponent(), encode URL values_broken URLs_injection problems => const text = "hello world";console.log(encodeURIComponent(text)); //output: hello%20world
+// decodeURIComponent(), decode encoded URL_search parameters => const text = "hello%20world";console.log(decodeURIComponent(text));
+
+// DOM MANIPULATION:
+// getElementById(), select by unique id_unique =>  document.getElementById("title");
+// querySelector(), select first matching id, class, tag etc => document.querySelector(".text"); //querySelector("#title"); //querySelector("p");
+// querySelectorAll(), select all matching NodeList_looping throw forEach() => document.querySelectorAll(".item"); console.log(items[0]);
+// createElement(), Create new HTML element dynamically => const div = document.createElement("div"); console.log(div); //output: <div></div>
+// textContent, add text_change text => div.textContent = "Hello";
+// innerHTML, insert html => div.innerHTML = "<strong>Hello</strong>";
+// style, Change CSS directly => element.style.color = "red";
+// classList, add class => div.classList.add("box");
+// appendChild(), to append html as a child => document.body.appendChild(div);
+// addEventListener(), listen events_click_input_submit_mouseover_keydown => element.addEventListener("eventName", callback); // const btn = document.getElementById("btn");
+// btn.addEventListener("click", (e) => { e.preventDefault(); console.log(e.target.value); console.log("Clicked");});
+// setAttribute(), add/update attribute => element.setAttribute(name,valuePair);
+// removeAttribute(), remove attribute=> button.removeAttribute("disabled");
+
+// DOM EVENT:
+// e.target, clicked element =>
+// e.type, event type =>
+// e.preventDefault(), stop default =>
+// e.key, keyboard key =>
